@@ -4,8 +4,11 @@ const app = express();
 
 // MongoDB 연결
 mongoose
-  .connect("mongodb://localhost:27017/my_database", { useNewUrlParser: true })
-  .then(() => console.log("MongoDB connected..."))
+  .connect(
+    "mongodb+srv://ka24:xCG0Wm4N9qnaL5fH@connect4.otv5gr4.mongodb.net/test",
+    { useNewUrlParser: true }
+  )
+  .then(() => console.log("MongoDB와 연결되었습니다..!"))
   .catch((err) => console.error(err));
 
 app.get("/", (req, res) => {
